@@ -13,16 +13,21 @@ ThemeData appTheme() {
     textTheme: TextTheme(
       headline1: TextStyle(
         fontFamily: "Noto Serif",
-        //fontSize: SizeConfig.scaleH*10,
+        fontSize: 64,
         color: Colors.black,
         fontWeight: FontWeight.bold
       ),
       headline2: TextStyle(
         fontFamily: "Noto Serif",
-       // fontSize: SizeConfig.scaleH*3,
+        fontSize: 24,
         color: Colors.black,
-        fontWeight: FontWeight.bold
-      )
+      ),
+      headline3: TextStyle(
+          fontFamily: "Noto Serif",
+          fontSize: 16,
+          color: Colors.black,
+      ),
+
     )
   );
 }
