@@ -9,7 +9,7 @@ ThemeData appTheme() {
     primaryColor: Colors.white,
     accentColor: Color.fromRGBO(254, 200, 154, 1),
     highlightColor: Color.fromRGBO(255, 229, 217, 1),
-    primaryColorDark: Colors.black,
+    primaryColorDark: Color.fromRGBO(52, 46, 55, 1),
     textTheme: TextTheme(
       headline1: TextStyle(
         fontFamily: "Noto Serif",

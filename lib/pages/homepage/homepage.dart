@@ -14,18 +14,17 @@ class HomePage extends StatelessWidget{
         children: <Widget>[
           Container(//first section container
             color: Theme.of(context).highlightColor,
-            height: SizeConfig.scaleH*90,
-            child: GridView.extent(//basically the row with the text and image
-              maxCrossAxisExtent: 800,
+            height: SizeConfig.scaleH*75,
+            child: Row(//basically the row with the text and image
               children: [
                 Container(
                   padding: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*20),
-                  width: SizeConfig.scaleW*55,
+                  width: SizeConfig.scaleW*47,
                   child: Column(
                     children: [
                       Text("Simplify your morning routine.", style: Theme.of(context).textTheme.headline1),
                       SizedBox(height: SizeConfig.scaleH*2),
-                      Text("Mornings don’t have to be the worst part of your day. Help us help you in making it the best.", style: Theme.of(context).textTheme.headline2),
+                      Text("Mornings don’t have to be the worst part of your day. Help us make it the best part.", style: Theme.of(context).textTheme.headline2),
                       SizedBox(height: SizeConfig.scaleH*2),
                       Row(
                         children: [
@@ -70,16 +69,20 @@ class HomePage extends StatelessWidget{
                   ),
                 ),
                 Container(
-                  width: SizeConfig.scaleW*45,
+                  width: SizeConfig.scaleW*53,
                   child: Image.asset("assets/brew_no_bg.png")
                 )
               ],
             )
           ),
           Container(
+            color: Theme.of(context).primaryColorDark,
+            height: SizeConfig.scaleH*60,
+          ),
+          Container(
             color: Theme.of(context).accentColor,
             height: SizeConfig.scaleH*100,
-          ),
+          )
         ],
       ),
     );
