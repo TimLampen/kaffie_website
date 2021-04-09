@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaffie_website/pages/homepage/h_appbar.dart';
 import 'package:kaffie_website/theme/size_config.dart';
 
 class HomePage extends StatelessWidget{
@@ -8,37 +9,7 @@ class HomePage extends StatelessWidget{
     SizeConfig.init(context);
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(255, 229, 217, 1),
-        elevation: 0,
-        title: Container(
-          margin: EdgeInsets.only(left: SizeConfig.scaleW*1, top: SizeConfig.scaleH*3),
-          child: Row(
-            children: [
-              Container(
-                child: Text("Kaffiee", style: Theme.of(context).textTheme.headline2.copyWith(fontWeight: FontWeight.bold)),
-                margin: EdgeInsets.only(right: SizeConfig.scaleW*2),
-              ),
-              Container(
-                child: Text("Product", style: Theme.of(context).textTheme.headline2),
-                margin: EdgeInsets.only(right: SizeConfig.scaleW*2),
-              ),
-              Container(
-                child: Text("Design", style: Theme.of(context).textTheme.headline2),
-                margin: EdgeInsets.only(right: SizeConfig.scaleW*2),
-              ),
-              Container(
-                child: Text("Sustainability", style: Theme.of(context).textTheme.headline2),
-                margin: EdgeInsets.only(right: SizeConfig.scaleW*2),
-              ),
-              Container(
-                child: Text("Features", style: Theme.of(context).textTheme.headline2),
-                margin: EdgeInsets.only(right: SizeConfig.scaleW*2),
-              ),
-            ],
-          ),
-        ),
-      ),
+      appBar: HAppBar(appBar: AppBar()),
       body: ListView(
         children: <Widget>[
           Container(//first section container
@@ -61,8 +32,13 @@ class HomePage extends StatelessWidget{
                           Container(
                             width: SizeConfig.scaleW*25,
                             child: TextField(
+                              style: Theme.of(context).textTheme.headline3,
                               decoration: InputDecoration(
-                                border: InputBorder.none,
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.white
+                                  )
+                                ),
                                 labelStyle: TextStyle(color: Colors.black),
                                 fillColor: Colors.white,
                                 filled: true,
@@ -84,7 +60,7 @@ class HomePage extends StatelessWidget{
                               ),
                               child: Container(
                                 padding: EdgeInsets.only(left: SizeConfig.scaleW*1, right: SizeConfig.scaleW*1),
-                                child: Text("Get Notified", style: TextStyle(color: Colors.black),)),
+                                child: Text("Get Notified", style: Theme.of(context).textTheme.headline3.copyWith(fontWeight: FontWeight.bold))),
                               onPressed: () {},
                             )
                           )
