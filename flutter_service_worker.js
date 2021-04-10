@@ -7,16 +7,16 @@ const RESOURCES = {
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "manifest.json": "6678bd58904922ce9760f58b9e75e604",
-"index.html": "19eea788cf4bd476e683c201849d3577",
-"/": "19eea788cf4bd476e683c201849d3577",
+"index.html": "96c25846a8520223748d647a8d6f3c2e",
+"/": "96c25846a8520223748d647a8d6f3c2e",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/NOTICES": "b87e7ceb9de555cb3775cbfd1db2618c",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/AssetManifest.json": "99570010db0110362dadcf4b19e48e7d",
 "assets/assets/brew_no_bg.png": "9a1765fbc3d3b433e5beea35a3592f08",
-"assets/assets/brew_front.png": "a2b161225057e702c739e7d33e7770f4",
+"assets/assets/brew_front.png": "a6db1ac6231006f9eaec23f21c00456f",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"main.dart.js": "6a5fcb991e9265b69a40c84c0a47de79",
+"main.dart.js": "9802e91716cb88d43cd0a57695f1130e",
 "version.json": "ccf113d4a246e7a70a5c82912e0cbda3"
 };
 
