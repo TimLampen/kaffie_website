@@ -13,7 +13,7 @@ class S2 extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(top: SizeConfig.scaleH*2, bottom: SizeConfig.scaleH*2),
-            child: Text("What is Kaffie?", style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.white)),
+            child: Text("Brew more, in less timee.", style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.white)),
           ),
           Row(
             children: [
