@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaffie_website/pages/homepage/h_appbar.dart';
-import 'package:kaffie_website/pages/homepage/section1/s1.dart';
-import 'package:kaffie_website/pages/homepage/section2/s2.dart';
+import 'package:kaffie_website/pages/homepage/section1/s1_content.dart';
+import 'package:kaffie_website/pages/homepage/section2/s2_content.dart';
 import 'package:kaffie_website/theme/size_config.dart';
 
 class HomePage extends StatelessWidget{
