@@ -30,6 +30,25 @@
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
+  <script>
+    //Note, this is NOT a security concern, as the database is configured to only accept changes from the domain kaffie.me, aka,
+    //a developer can't just run this on their own project to make changes.
+    var firebaseConfig = {
+      apiKey: "AIzaSyDPEJ1rpKXdtLxFTjL2_de_tAT_x_XxWxs",
+      authDomain: "kaffie-62740.firebaseapp.com",
+      databaseURL: "https://kaffie-62740-default-rtdb.firebaseio.com",
+      projectId: "kaffie-62740",
+      storageBucket: "kaffie-62740.appspot.com",
+      messagingSenderId: "805190537217",
+      appId: "1:805190537217:web:52f66454ab210f0c873000",
+      measurementId: "G-2F1JE0DCCZ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+  </script>
+
   <title>kaffie_website</title>
   <link rel="manifest" href="manifest.json">
 </head>
@@ -40,7 +59,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('flutter-first-frame', function () {
-        navigator.serviceWorker.register('flutter_service_worker.js?v=3023374340');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=1300686953');
       });
     }
   </script>
