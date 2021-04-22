@@ -18,20 +18,21 @@ class TimeComparison extends StatelessWidget {
             isKaffie: true,
           ),
           TimeCard(
-            title: "Drip-type coffee machine",
-            subtitle: "10x slower.",
-            seconds: 100,
-          ),
-          TimeCard(
-            title: "Built-in coffee machine",
-            subtitle: "7x slower.",
-            seconds: 70,
-          ),
-          TimeCard(
             title: "Leading pod-type machine",
             subtitle: "4x slower.",
             seconds: 40,
           ),
+          TimeCard(
+            title: "Drip-type coffee machine",
+            subtitle: "10x slower.",
+            seconds: 160,
+          ),
+          TimeCard(
+            title: "Built-in coffee machine",
+            subtitle: "22x slower.",
+            seconds: 225,
+          ),
+
         ]
       ),
     );
@@ -55,8 +56,9 @@ class TimeCard extends StatelessWidget {
         color: this.isKaffie ?  Theme.of(context).accentColor : Theme.of(context).highlightColor,
         child: ListTile(
           leading: Icon(FontAwesome5.clock),
+          trailing: Text("${this.seconds}s"),
           title: Text(this.title, style: this.isKaffie ? Theme.of(context).textTheme.headline2 : Theme.of(context).textTheme.headline2.copyWith(color: Colors.black54)),
-          subtitle: Text(this.isKaffie ?  this.subtitle : "${this.subtitle} (${this.seconds}s prime + brew time)", style: this.isKaffie ? Theme.of(context).textTheme.headline3 : Theme.of(context).textTheme.headline3.copyWith(color: Colors.black54)),
+          subtitle: Text(this.isKaffie ?  this.subtitle : "${this.subtitle}", style: this.isKaffie ? Theme.of(context).textTheme.headline3 : Theme.of(context).textTheme.headline3.copyWith(color: Colors.black54)),
         ),
       ),
     );

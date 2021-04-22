@@ -13,6 +13,8 @@ class _EmailFormState extends State<EmailForm> {
   final _formKey = GlobalKey<FormState>();
   final emailHolder = TextEditingController();
 
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,7 +71,6 @@ class _EmailFormState extends State<EmailForm> {
                       ref.push(emailHolder.text);
 
                       emailHolder.clear();
-
                     }
                   },
                 )

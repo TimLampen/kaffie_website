@@ -28,7 +28,8 @@ class S2 extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(top: 100),
-            child: Image.asset("assets/coffee_just_machine.png")),
+            child: Image.asset("assets/coffee_just_machine.png")
+          ),
         ],
       ),
     );
