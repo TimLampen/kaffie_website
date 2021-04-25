@@ -28,5 +28,23 @@ ThemeData appTheme() {
           color: Colors.black,
       ),
     ),
+    accentTextTheme: TextTheme(
+      headline1: TextStyle(
+          fontFamily: "Noto Serif",
+          fontSize: 42,
+          color: Colors.black,
+          fontWeight: FontWeight.bold
+      ),
+      headline2: TextStyle(
+        fontFamily: "Noto Serif",
+        fontSize: 18,
+        color: Colors.black,
+      ),
+      headline3: TextStyle(
+        fontFamily: "Noto Serif",
+        fontSize: 14,
+        color: Colors.black,
+      ),
+    ),
   );
 }

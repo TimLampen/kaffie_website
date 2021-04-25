@@ -12,8 +12,11 @@ class SpeedContent extends StatelessWidget {
         if(constraints.maxWidth > 1050){
           return DesktopSpeedContent();
         }
-        else {
+        else if(constraints.maxWidth > 500) {
           return LaptopSpeedContent();
+        }
+        else{
+          return MobileSpeedContent();
         }
       });
   }
@@ -72,6 +75,38 @@ class LaptopSpeedContent extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white), textAlign: TextAlign.center,
                 ),
                 TimeComparison(),
+              ],
+            ),
+          ),
+          Container(
+              width: SizeConfig.scaleW*60,
+              child: Image.asset("assets/coffee_just_machine.png")
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MobileSpeedContent extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5),
+      child: Column(
+        children: [
+          Container(
+            child: Column(
+              children: [
+                Text("Brew more, in way less time.", style: Theme.of(context).accentTextTheme.headline1.copyWith(color: Colors.white, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                SizedBox(height: 10),
+                Text(
+                  "On average, Kaffie can brew your coffee faster than any other coffee-competitor on the market, due to it's fast-wakeup mechanism when paired with your Apple Watch."
+                      "With Kaffie, gone are the days waiting for your coffee to brew, by the time you come back from your fridge to get your milk, it will already be done.",
+                  style: Theme.of(context).accentTextTheme.headline2.copyWith(color: Colors.white), textAlign: TextAlign.center,
+                ),
+                TimeComparison(isMobile: true),
               ],
             ),
           ),
