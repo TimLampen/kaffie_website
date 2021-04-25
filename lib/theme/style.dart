@@ -27,7 +27,6 @@ ThemeData appTheme() {
           fontSize: 16,
           color: Colors.black,
       ),
-
-    )
+    ),
   );
 }
