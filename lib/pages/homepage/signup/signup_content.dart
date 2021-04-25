@@ -8,9 +8,9 @@ class SignupContent extends StatelessWidget{
   Widget build(BuildContext context) {
     return  LayoutBuilder(
       builder: (context, constraints) {
+        print(constraints.maxWidth);
         if(constraints.maxWidth > 1050){
           return Container(//first section container
-
               color: Theme.of(context).highlightColor,
               height: SizeConfig.scaleH*80,
               child: Row(//basically the row with the text and image
@@ -18,6 +18,7 @@ class SignupContent extends StatelessWidget{
                   DesktopSignupText(),
                   Container(
                       width: SizeConfig.scaleW*40,
+                      padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
                       child: Image.asset("assets/brew_no_bg.png")
                   )
                 ],

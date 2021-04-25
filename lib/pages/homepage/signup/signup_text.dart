@@ -6,7 +6,8 @@ class DesktopSignupText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*20, right: SizeConfig.scaleW*10),
+      padding: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*20),
+      width: SizeConfig.scaleW*55,
       child: Column(
         children: [
           Text("Simplify your morning routine.", style: Theme.of(context).textTheme.headline1),
