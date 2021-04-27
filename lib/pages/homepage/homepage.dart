@@ -15,11 +15,20 @@ class HomePage extends StatelessWidget{
     return Scaffold(
       body: ListView(
         children: <Widget>[
-          HAppBar(),
-          SignupContent(),
+          Stack(
+            children: [
+              Image.asset("assets/brew_bg_full.png", width: SizeConfig.scaleW*100,),
+              Column(
+                children: [
+                  HAppBar(),
+                  SignupContent(),
+                ],
+              )
+            ],
+          ),
           Container(
-            padding: EdgeInsets.only(bottom: 100, top: 100),
-            color: Theme.of(context).primaryColorDark,
+            padding: EdgeInsets.fromLTRB(SizeConfig.scaleW*5, 100, SizeConfig.scaleW*5, 100),
+            color: Color.fromRGBO(250, 255, 253, 1),
             child: Column(
               children: [
                 DesignContent(),
