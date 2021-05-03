@@ -6,13 +6,13 @@ class DesktopSignupText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*20),
+      padding: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*20, right: SizeConfig.scaleW*5),
       width: SizeConfig.scaleW*55,
       child: Column(
         children: [
-          Text("Simplify your morning routine.", style: Theme.of(context).textTheme.headline1),
+          Text("Reimagine the way you brew coffee.", style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.white)),
           SizedBox(height: SizeConfig.scaleH*2),
-          Text("Mornings don’t have to be the worst part of your day. Kaffie makes it the best part.", style: Theme.of(context).textTheme.headline2),
+          Text("Sign up below to stay updated on information surrounding Kaffie's release.", style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white), textAlign: TextAlign.left,),
           SizedBox(height: SizeConfig.scaleH*2),
           DesktopEmailForm()
         ],

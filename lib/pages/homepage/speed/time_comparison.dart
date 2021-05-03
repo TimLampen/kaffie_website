@@ -99,16 +99,23 @@ class TimeCard extends StatelessWidget {
         child: Card(
           color: this.isKaffie ? Theme
               .of(context)
-              .accentColor : Theme
+              .primaryColorDark : Theme
               .of(context)
               .highlightColor,
           child: ListTile(
-            leading: Icon(FontAwesome5.clock),
-            trailing: Text("${this.seconds}s"),
+            leading: Icon(FontAwesome5.clock, color: this.isKaffie ? Colors.white : Colors.black54),
+            trailing: Text("${this.seconds}s", style: this.isKaffie ? Theme
+                .of(context)
+                .textTheme
+                .headline3.copyWith(color: Colors.white) : Theme
+                .of(context)
+                .textTheme
+                .headline3
+                .copyWith(color: Colors.black54)),
             title: Text(this.title, style: this.isKaffie ? Theme
                 .of(context)
                 .textTheme
-                .headline2 : Theme
+                .headline2.copyWith(color: Colors.white) : Theme
                 .of(context)
                 .textTheme
                 .headline2
@@ -117,7 +124,7 @@ class TimeCard extends StatelessWidget {
                 style: this.isKaffie ? Theme
                     .of(context)
                     .textTheme
-                    .headline3 : Theme
+                    .headline3.copyWith(color: Colors.white) : Theme
                     .of(context)
                     .textTheme
                     .headline3

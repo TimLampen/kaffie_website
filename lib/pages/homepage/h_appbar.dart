@@ -11,9 +11,6 @@ class HAppBar extends StatelessWidget{
         print(constraints.widthConstraints());
         if (constraints.maxWidth > 500) {
           return Container(
-              color: Theme
-                  .of(context)
-                  .highlightColor,
               padding: EdgeInsets.only(
                   left: SizeConfig.scaleW * 1, top: SizeConfig.scaleH * 3),
               child: Row(
@@ -23,7 +20,7 @@ class HAppBar extends StatelessWidget{
                         .of(context)
                         .textTheme
                         .headline2
-                        .copyWith(fontWeight: FontWeight.bold)),
+                        .copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
                     margin: EdgeInsets.only(
                         left: SizeConfig.scaleW, right: SizeConfig.scaleW * 3),
                   ),
@@ -31,28 +28,28 @@ class HAppBar extends StatelessWidget{
                     child: Text("Product", style: Theme
                         .of(context)
                         .textTheme
-                        .headline3),
+                        .headline3.copyWith(color: Colors.white)),
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                   Container(
                     child: Text("Design", style: Theme
                         .of(context)
                         .textTheme
-                        .headline3),
+                        .headline3.copyWith(color: Colors.white)),
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                   Container(
                     child: Text("Sustainability", style: Theme
                         .of(context)
                         .textTheme
-                        .headline3),
+                        .headline3.copyWith(color: Colors.white)),
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                   Container(
                     child: Text("Features", style: Theme
                         .of(context)
                         .textTheme
-                        .headline3),
+                        .headline3.copyWith(color: Colors.white)),
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                 ],
