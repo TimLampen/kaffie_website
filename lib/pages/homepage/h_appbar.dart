@@ -25,7 +25,7 @@ class HAppBar extends StatelessWidget{
                         left: SizeConfig.scaleW, right: SizeConfig.scaleW * 3),
                   ),
                   Container(
-                    child: Text("Product", style: Theme
+                    child: Text("How it Works", style: Theme
                         .of(context)
                         .textTheme
                         .headline3.copyWith(color: Colors.white)),
@@ -39,14 +39,14 @@ class HAppBar extends StatelessWidget{
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                   Container(
-                    child: Text("Sustainability", style: Theme
+                    child: Text("Features", style: Theme
                         .of(context)
                         .textTheme
                         .headline3.copyWith(color: Colors.white)),
                     margin: EdgeInsets.only(right: SizeConfig.scaleW * 2),
                   ),
                   Container(
-                    child: Text("Features", style: Theme
+                    child: Text("Sustainability", style: Theme
                         .of(context)
                         .textTheme
                         .headline3.copyWith(color: Colors.white)),
@@ -58,9 +58,6 @@ class HAppBar extends StatelessWidget{
         }
         else{
           return Container(
-              color: Theme
-                  .of(context)
-                  .highlightColor,
               padding: EdgeInsets.only(
                    top: SizeConfig.scaleH * 3),
               child: Row(
@@ -71,7 +68,7 @@ class HAppBar extends StatelessWidget{
                         .of(context)
                         .accentTextTheme
                         .headline2
-                        .copyWith(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                        .copyWith( color: Colors.white), textAlign: TextAlign.center,),
                   ),
                 ],
               )
