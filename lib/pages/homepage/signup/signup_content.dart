@@ -16,16 +16,12 @@ class SignupContent extends StatelessWidget{
           );
         }
         else if(constraints.maxWidth > 500){
-          return Container(//first section container
-              color: Theme.of(context).highlightColor,
-              padding: EdgeInsets.only(bottom: SizeConfig.scaleH*20, top: SizeConfig.scaleH*10),
+          return Container(
               child: LaptopSignupText()
           );
         }
         else{
-          return Container(//first section container
-              color: Theme.of(context).highlightColor,
-              padding: EdgeInsets.only(bottom: SizeConfig.scaleH*10, top: SizeConfig.scaleH*5),
+          return Container(
               child: MobileSignupText()
           );
         }
