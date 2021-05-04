@@ -32,7 +32,6 @@ class HomePage extends StatelessWidget{
           ),
           Container(
             padding: EdgeInsets.fromLTRB(SizeConfig.scaleW*5, 100, SizeConfig.scaleW*5, 100),
-            color: Color.fromRGBO(250, 255, 253, 1),
             child: Column(
               children: [
                 DesignContent(),
