@@ -23,6 +23,7 @@ class _DesktopEmailFormState extends State<DesktopEmailForm> {
         children: [
           Container(
             width: SizeConfig.scaleW*25,
+            height: SizeConfig.scaleH*5,
             child: TextFormField(
               controller: emailHolder,
               validator: (value) {
@@ -53,7 +54,7 @@ class _DesktopEmailFormState extends State<DesktopEmailForm> {
           ),
           Container(
               margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-              height: SizeConfig.scaleH*6,
+              height: SizeConfig.scaleH*5,
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)
@@ -99,6 +100,7 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
         child:  Row(
           children: [
             Container(
+              height: SizeConfig.scaleH*5,
               width: SizeConfig.scaleW*40,
               child: TextFormField(
                 controller: emailHolder,
@@ -130,7 +132,7 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
             ),
             Container(
                 margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-                height: SizeConfig.scaleH*6,
+                height: SizeConfig.scaleH*5,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)
@@ -175,6 +177,7 @@ class _MobileEmailFormState extends State<MobileEmailForm> {
         child:  Row(
           children: [
             Container(
+              height: SizeConfig.scaleH*5,
               width: SizeConfig.scaleW*60,
               child: TextFormField(
                 controller: emailHolder,
@@ -206,7 +209,7 @@ class _MobileEmailFormState extends State<MobileEmailForm> {
             ),
             Container(
                 margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-                height: SizeConfig.scaleH*6,
+                height: SizeConfig.scaleH*5,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)

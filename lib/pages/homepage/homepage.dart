@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget{
             ),
           ),
           Container(
-            padding: EdgeInsets.fromLTRB(SizeConfig.scaleW*5, 100, SizeConfig.scaleW*5, 100),
+            padding: EdgeInsets.fromLTRB(SizeConfig.scaleW*5, SizeConfig.scaleH*5, SizeConfig.scaleW*5, SizeConfig.scaleH*5),
             child: Column(
               children: [
                 DesignContent(),
