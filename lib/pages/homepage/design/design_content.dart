@@ -9,7 +9,7 @@ class DesignContent extends StatelessWidget {
     return LayoutBuilder(
         builder: (context, constraints) {
           if(constraints.maxWidth > 1050){
-            return DesktopDesignContent();
+            return DesktopDesignContent(width: constraints.maxWidth);
           }
           else if(constraints.maxWidth > 500){
             return LaptopDesignContent();
@@ -24,43 +24,53 @@ class DesignContent extends StatelessWidget {
 
 class DesktopDesignContent extends StatelessWidget {
 
+  double width;
+  DesktopDesignContent({Key key, this.width}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        children: [
-          Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.75),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3), // changes position of shadow
+    return Stack(
+      children: [
+        Container(
+          margin: EdgeInsets.only(top: 75),
+          width: SizeConfig.scaleW*95,
+          height: 400,
+          decoration: BoxDecoration(
+              color: Theme.of(context).accentColor,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10))
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: SizeConfig.scaleW*5, vertical: 50),
+          child: Row(
+            children: [
+              Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
-                ],
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: this.width > 1200 ? Image.asset("assets/brew_bg.png", height: 450 ,) : Image.asset("assets/brew_bg_cropped.png", height: 450,)
+                )
               ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset("assets/brew_bg.png", width: SizeConfig.scaleW*40,)
-            )
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
+                  child: Column(
+                    children: [
+                      Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
+                      SizedBox(height: 10),
+                      Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
+                          "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).textTheme.headline2),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-          Container(
-            width: SizeConfig.scaleW*45,
-            margin: EdgeInsets.only(left: SizeConfig.scaleW*5),
-            child: Column(
-              children: [
-                Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
-                SizedBox(height: 10),
-                Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
-                    "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).textTheme.headline2),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -70,10 +80,16 @@ class LaptopDesignContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: SizeConfig.scaleH*5),
+        padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
+        decoration: BoxDecoration(
+            color: Theme.of(context).accentColor,
+            borderRadius: BorderRadius.all(Radius.circular(10))
+        ),
       child: Column(
         children: [
           Container(
-            width: SizeConfig.scaleW*60,
+            width: SizeConfig.scaleW*70,
             padding: EdgeInsets.only(bottom: SizeConfig.scaleH*5),
             child: Column(
               children: [
@@ -88,18 +104,10 @@ class LaptopDesignContent extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(20)),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.75),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
               ),
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("assets/brew_bg.png", width: SizeConfig.scaleW*60,)
+                  child: Image.asset("assets/brew_bg.png", width: SizeConfig.scaleW*70)
               )
           ),
 
@@ -114,18 +122,20 @@ class MobileDesignContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(SizeConfig.scaleW*5),
+      decoration: BoxDecoration(
+          color: Theme.of(context).accentColor,
+      ),
       alignment: Alignment.center,
-      padding: EdgeInsets.only(left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5, bottom: SizeConfig.scaleH*5),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("From tucked away to center stage.", style: Theme.of(context).accentTextTheme.headline1, textAlign: TextAlign.center,),
+          Text("From tucked away to center stage.", style: Theme.of(context).accentTextTheme.headline1, textAlign: TextAlign.center),
           SizedBox(height: 10),
           Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
               "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).accentTextTheme.headline2, textAlign: TextAlign.center,),
           SizedBox(height: 20),
           Container(
-              width: SizeConfig.scaleW*90,
+            padding: EdgeInsets.only(left: SizeConfig.scaleW*2),
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset("assets/brew_bg.png")

@@ -27,10 +27,15 @@ class DesktopSpeedContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: SizeConfig.scaleH*10),
+      margin: EdgeInsets.symmetric(horizontal: SizeConfig.scaleW*5, vertical: SizeConfig.scaleH*5),
       child: Row(
         children: [
           Container(
+            padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
+            decoration: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
             width: SizeConfig.scaleW * 45,
             child: Column(
               children: [
@@ -46,7 +51,7 @@ class DesktopSpeedContent extends StatelessWidget {
             ),
           ),
           Container(
-              width: SizeConfig.scaleW*30,
+              height: SizeConfig.scaleW*65,
               margin: EdgeInsets.only(left: SizeConfig.scaleW*10, top: SizeConfig.scaleH*5),
               child: Image.asset("assets/coffee_just_machine.png")
           ),
@@ -60,12 +65,18 @@ class LaptopSpeedContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
+      padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
+      decoration: BoxDecoration(
+          color: Theme.of(context).accentColor,
+          borderRadius: BorderRadius.all(Radius.circular(10))
+      ),
       margin: EdgeInsets.only(top: SizeConfig.scaleH*5),
       child: Column(
         children: [
           Container(
-            width: SizeConfig.scaleW * 60,
+            width: SizeConfig.scaleW * 70,
             child: Column(
               children: [
                 Text("Brew more, in way less time.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
@@ -80,7 +91,7 @@ class LaptopSpeedContent extends StatelessWidget {
             ),
           ),
           Container(
-              width: SizeConfig.scaleW*50,
+              width: SizeConfig.scaleW*30,
               margin: EdgeInsets.only( top: SizeConfig.scaleH*5),
               child: Image.asset("assets/coffee_just_machine.png")
           ),
@@ -95,10 +106,12 @@ class MobileSpeedContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5),
+      margin: EdgeInsets.only(top: 50),
       child: Column(
         children: [
           Container(
+            padding: EdgeInsets.all(SizeConfig.scaleW*5),
+
             child: Column(
               children: [
                 Text("Brew more, in way less time.", style: Theme.of(context).accentTextTheme.headline1.copyWith(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
@@ -111,10 +124,6 @@ class MobileSpeedContent extends StatelessWidget {
                 TimeComparison(isMobile: true),
               ],
             ),
-          ),
-          Container(
-              width: SizeConfig.scaleW*60,
-              child: Image.asset("assets/coffee_just_machine.png")
           ),
         ],
       ),

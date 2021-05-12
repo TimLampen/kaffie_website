@@ -16,28 +16,22 @@ class HomePage extends StatelessWidget{
     return Scaffold(
       body: ListView(
         children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(bottom: SizeConfig.scaleH*5),
-            child: Stack(
-              children: [
-                ResizedBackgroundImage(),
-                Column(
-                  children: [
-                    HAppBar(),
-                    SignupContent(),
-                  ],
-                )
-              ],
-            ),
+          Stack(
+            children: [
+              ResizedBackgroundImage(),
+              Column(
+                children: [
+                  HAppBar(),
+                  SignupContent(),
+                ],
+              )
+            ],
           ),
-          Container(
-            padding: EdgeInsets.fromLTRB(SizeConfig.scaleW*5, SizeConfig.scaleH*5, SizeConfig.scaleW*5, SizeConfig.scaleH*5),
-            child: Column(
-              children: [
-                DesignContent(),
-                SpeedContent()
-              ],
-            ),
+          Column(
+            children: [
+              DesignContent(),
+              SpeedContent()
+            ],
           ),
         ],
       ),
