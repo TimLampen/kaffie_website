@@ -7,6 +7,8 @@ import 'package:kaffie_website/pages/homepage/speed/speed_content.dart';
 
 import 'package:kaffie_website/theme/size_config.dart';
 
+import 'bottom_navigation.dart';
+
 class HomePage extends StatelessWidget{
 
   @override
@@ -35,6 +37,7 @@ class HomePage extends StatelessWidget{
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigation()
     );
   }
 

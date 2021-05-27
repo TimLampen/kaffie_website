@@ -12,7 +12,7 @@ class SpeedContent extends StatelessWidget {
         if(constraints.maxWidth > 1050){
           return DesktopSpeedContent();
         }
-        else if(constraints.maxWidth > 500) {
+        else if(constraints.maxWidth > 580) {
           return LaptopSpeedContent();
         }
         else{

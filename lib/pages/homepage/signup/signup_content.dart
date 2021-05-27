@@ -15,7 +15,7 @@ class SignupContent extends StatelessWidget{
             child: DesktopSignupText()
           );
         }
-        else if(constraints.maxWidth > 500){
+        else if(constraints.maxWidth > 580){
           return Container(
               child: LaptopSignupText()
           );

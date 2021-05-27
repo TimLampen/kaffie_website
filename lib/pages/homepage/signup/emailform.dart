@@ -20,10 +20,11 @@ class _DesktopEmailFormState extends State<DesktopEmailForm> {
     return Form(
       key: _formKey,
       child:  Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
+            height: SizeConfig.scaleH*10,
             width: SizeConfig.scaleW*25,
-            height: SizeConfig.scaleH*5,
             child: TextFormField(
               controller: emailHolder,
               validator: (value) {
@@ -53,8 +54,8 @@ class _DesktopEmailFormState extends State<DesktopEmailForm> {
             ),
           ),
           Container(
-              margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-              height: SizeConfig.scaleH*5,
+              margin: EdgeInsets.only(left: SizeConfig.scaleW*2, top: 0),
+              height: SizeConfig.scaleH*5.5,
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)
@@ -98,9 +99,10 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
     return Form(
         key: _formKey,
         child:  Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: SizeConfig.scaleH*5,
+              height: SizeConfig.scaleH*10,
               width: SizeConfig.scaleW*40,
               child: TextFormField(
                 controller: emailHolder,
@@ -131,8 +133,8 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
               ),
             ),
             Container(
-                margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-                height: SizeConfig.scaleH*5,
+                margin: EdgeInsets.only(left: SizeConfig.scaleW*2, top: 2),
+                height: SizeConfig.scaleH*5.5,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)
@@ -174,10 +176,11 @@ class _MobileEmailFormState extends State<MobileEmailForm> {
   Widget build(BuildContext context) {
     return Form(
         key: _formKey,
-        child:  Row(
+        child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: SizeConfig.scaleH*5,
+              margin: EdgeInsets.only(bottom: 10),
               width: SizeConfig.scaleW*60,
               child: TextFormField(
                 controller: emailHolder,
@@ -188,7 +191,7 @@ class _MobileEmailFormState extends State<MobileEmailForm> {
                     return "Please enter a valid email address";
                   return null;
                 },
-                style: Theme.of(context).accentTextTheme.headline3,
+                style: Theme.of(context).accentTextTheme.headline2,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -207,28 +210,28 @@ class _MobileEmailFormState extends State<MobileEmailForm> {
                 ),
               ),
             ),
-            Container(
-                margin: EdgeInsets.only(left: SizeConfig.scaleW*2),
-                height: SizeConfig.scaleH*5,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)
-                  ),
-                  child: Container(
-                      padding: EdgeInsets.only(left: SizeConfig.scaleW*1, right: SizeConfig.scaleW*1),
-                      child: Text("Get Notified", style: Theme.of(context).accentTextTheme.headline3.copyWith(fontWeight: FontWeight.bold))),
-                  onPressed: () {
-                    if(_formKey.currentState.validate()){
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(backgroundColor: Colors.green,content: Text("Success! You have been added to the email list.")));
+            ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(SizeConfig.scaleW*5))
+              ),
+              child: Container(
+                alignment: Alignment.center ,
+                height: 20,
+                width: 260,
+                  padding: EdgeInsets.only(left: SizeConfig.scaleW*1, right: SizeConfig.scaleW*1),
+                  child: Text("Get Notified", style: Theme.of(context).accentTextTheme.headline2.copyWith(fontWeight: FontWeight.bold))),
+              onPressed: () {
+                if(_formKey.currentState.validate()){
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(backgroundColor: Colors.green,content: Text("Success! You have been added to the email list.")));
 
-                      Database db = database();
-                      DatabaseReference ref = db.ref('emails');
-                      ref.push(emailHolder.text);
+                  Database db = database();
+                  DatabaseReference ref = db.ref('emails');
+                  ref.push(emailHolder.text);
 
-                      emailHolder.clear();
-                    }
-                  },
-                )
+                  emailHolder.clear();
+                }
+              },
             )
           ],
         )

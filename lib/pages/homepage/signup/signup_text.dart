@@ -26,7 +26,7 @@ class LaptopSignupText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: EdgeInsets.only(top: SizeConfig.scaleH*10, left: SizeConfig.scaleW*10, right: SizeConfig.scaleW*10, bottom: SizeConfig.scaleH*10),
+      padding: EdgeInsets.only(top: SizeConfig.scaleH*10, left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5, bottom: SizeConfig.scaleH*10),
       child: Column(
         children: [
           Text("Simplify your morning routine.", style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.white)),
@@ -44,14 +44,12 @@ class MobileSignupText extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: EdgeInsets.only(top: SizeConfig.scaleH*10, left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5, bottom: SizeConfig.scaleH*10),
+      padding: EdgeInsets.only(top: SizeConfig.scaleH*5, left: SizeConfig.scaleW*5, right: SizeConfig.scaleW*5),
       child: Column(
         children: [
           Text("Simplify your morning routine.", style: Theme.of(context).accentTextTheme.headline1.copyWith(color: Colors.white)),
           SizedBox(height: SizeConfig.scaleH*2),
           Text("Mornings don’t have to be the worst part of your day. Kaffie makes it the best part.", style: Theme.of(context).accentTextTheme.headline2.copyWith(color: Colors.white)),
-          SizedBox(height: SizeConfig.scaleH*2),
-          MobileEmailForm()
         ],
       ),
     );

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kaffie_website/theme/size_config.dart';
 
+import '../slide_in_container.dart';
+
 class DesignContent extends StatelessWidget {
 
   @override
@@ -11,7 +13,7 @@ class DesignContent extends StatelessWidget {
           if(constraints.maxWidth > 1050){
             return DesktopDesignContent(width: constraints.maxWidth);
           }
-          else if(constraints.maxWidth > 500){
+          else if(constraints.maxWidth > 580){
             return LaptopDesignContent();
           }
           else{
@@ -134,12 +136,11 @@ class MobileDesignContent extends StatelessWidget {
           Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
               "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).accentTextTheme.headline2, textAlign: TextAlign.center,),
           SizedBox(height: 20),
-          Container(
-            padding: EdgeInsets.only(left: SizeConfig.scaleW*2),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("assets/brew_bg.png")
-              )
+          SlideInContainer(
+            widget: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset("assets/brew_bg.png")
+            ),
           ),
         ],
       ),

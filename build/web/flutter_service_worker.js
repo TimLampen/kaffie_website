@@ -31,12 +31,12 @@ const RESOURCES = {
 "assets/packages/flutter_icons/fonts/SimpleLineIcons.ttf": "d2285965fe34b05465047401b8595dd0",
 "assets/packages/flutter_icons/fonts/weathericons.ttf": "4618f0de2a818e7ad3fe880e0b74d04a",
 "assets/packages/flutter_icons/fonts/Zocial.ttf": "5cdf883b18a5651a29a4d1ef276d2457",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"favicon.png": "8121c907e1afce727059ce8986cb7608",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "585b8a9db4c7974d926d5e78fc1120c9",
-"/": "585b8a9db4c7974d926d5e78fc1120c9",
-"main.dart.js": "0fa3989752b365c34a6bed85970da3eb",
+"index.html": "8ee0ca30607798aec9e4d0368f87ebed",
+"/": "8ee0ca30607798aec9e4d0368f87ebed",
+"main.dart.js": "7e290b51d56b8049fa6716e42e1fdeb2",
 "manifest.json": "1b0d1784c2ff02431f4145149ecfc1c4",
 "version.json": "ccf113d4a246e7a70a5c82912e0cbda3"
 };
