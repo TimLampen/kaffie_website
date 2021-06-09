@@ -36,7 +36,7 @@ class Footer extends StatelessWidget {
             padding: EdgeInsets.all(25),
             width: SizeConfig.scaleW*100,
             color: Color.fromRGBO(163, 145, 113, 1),
-            child: Text("Made with ❤ by Tim, Elan, and Selina. Developed in Queen's University (Kingston, Canada)", style: Theme.of(context).textTheme.headline3.copyWith(color: Colors.white)
+            child: Text("Made with ❤ by Tim, Elan, and Selina. Developed at Queen's University (Kingston, Canada)", style: Theme.of(context).textTheme.headline3.copyWith(color: Colors.white)
 
     ),
           )
