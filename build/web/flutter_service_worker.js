@@ -3,14 +3,20 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "701b885d7d373232364ec24403b8be95",
+  "assets/AssetManifest.json": "e6182e10c3e49ce310e6462eb3283ae6",
+"assets/assets/bg1.png": "15ea41eb7277fb36f90972c3ffb48201",
 "assets/assets/brew_bg.png": "c7aecc75dfc4422f1e1f158eb4d9905a",
 "assets/assets/brew_bg_cropped.png": "1bd610c8841df22b546cb5b0a0bafea1",
 "assets/assets/brew_bg_full_desktop.png": "27875e4228d2ad6204e9d32aa273fd24",
 "assets/assets/brew_bg_full_laptop.png": "8183ab665a92e71b9851d92066fe68c1",
 "assets/assets/brew_bg_full_mobile.png": "a24ec83e850bcf123993e2b04df20578",
 "assets/assets/brew_no_bg.png": "23a5011f861c29473a6c19df62fbda4a",
-"assets/assets/coffee_just_machine.png": "f765f63ee5ddd5722b47bc7e1c3a655f",
+"assets/assets/coffee_cup.png": "076c83eecc20b55e1192118bd35591c8",
+"assets/assets/coffee_just_machine.png": "773c0bd794adb1d05768517585c1c72b",
+"assets/assets/health_screenshot.jpg": "c65785a826a03c41af8d4afa5f1c9e0c",
+"assets/assets/iphone_outline.png": "4dd92abe4608fb8e4e2ec104a134fedb",
+"assets/assets/kaffie_cut.png": "751db6a8a823ac49563ca35a5ef52cbf",
+"assets/assets/kaffie_logo.png": "d56028fdd9fa65ea58cdca9d02c8f2fb",
 "assets/FontManifest.json": "7aaf3996738086bbd796613e14ef9e45",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
 "assets/NOTICES": "e73aee410f538eedf84fd8cb9847410f",
@@ -34,9 +40,9 @@ const RESOURCES = {
 "favicon.png": "8121c907e1afce727059ce8986cb7608",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "8ee0ca30607798aec9e4d0368f87ebed",
-"/": "8ee0ca30607798aec9e4d0368f87ebed",
-"main.dart.js": "7e290b51d56b8049fa6716e42e1fdeb2",
+"index.html": "5c21b72d0deeda416a19d4c5db98c040",
+"/": "5c21b72d0deeda416a19d4c5db98c040",
+"main.dart.js": "9780863ef4e12956e3b4757d6beb0880",
 "manifest.json": "1b0d1784c2ff02431f4145149ecfc1c4",
 "version.json": "ccf113d4a246e7a70a5c82912e0cbda3"
 };
