@@ -31,48 +31,33 @@ class DesktopDesignContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          margin: EdgeInsets.only(top: 75),
-          width: SizeConfig.scaleW*95,
-          height: 400,
-          decoration: BoxDecoration(
-              color: Theme.of(context).accentColor,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10))
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: SizeConfig.scaleW*5, vertical: 50),
-          child: Row(
-            children: [
-              Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: this.width > 1200 ? Image.asset("assets/brew_bg.png", height: 450 ,) : Image.asset("assets/brew_bg_cropped.png", height: 450,)
-                )
-              ),
-              Expanded(
-                child: Container(
-                  padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
+    return Container(
+      child: Stack(
+        children: [
+          Container(
+            alignment: Alignment.topCenter,
+            padding: EdgeInsets.only(top: 100),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Material(elevation: 10, child: Image.asset("assets/brew_bg.png", width: 500,)),
+                Container(
+                  margin: EdgeInsets.only(left: 50),
+                  width: 550,
                   child: Column(
                     children: [
-                      Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
+                      Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1),
                       SizedBox(height: 10),
                       Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
                           "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).textTheme.headline2),
                     ],
                   ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+                )
+              ],
+            ),
+          )
+        ]
+      ),
     );
   }
 }
@@ -123,6 +108,7 @@ class MobileDesignContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Scrollable.of(context).position.pixels);
     return Container(
       padding: EdgeInsets.all(SizeConfig.scaleW*5),
       decoration: BoxDecoration(

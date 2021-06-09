@@ -17,7 +17,7 @@ class BottomNavigation extends StatelessWidget{
           child: Row(
             children: [
               Container(
-                width: SizeConfig.scaleW*60,
+                width: SizeConfig.scaleW*65,
                 padding: EdgeInsets.all(10),
                 child: Text(
                   "Sign up for our newsletter and get notified when Kaffie launches publicly.",
@@ -25,17 +25,17 @@ class BottomNavigation extends StatelessWidget{
                   style: Theme.of(context).accentTextTheme.headline3),
               ),
               Container(
-                width: SizeConfig.scaleW*40,
-                padding: EdgeInsets.all(SizeConfig.scaleW*5),
+                width: SizeConfig.scaleW*30,
+                alignment: Alignment.centerRight,
                 child: ElevatedButton(
                   onPressed: (){
                     showDialog(builder: (BuildContext context) {return EmailDialog();}, context: context);
                   },
                   style: ButtonStyle(
+                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColorDark),
-                      padding: MaterialStateProperty.all(EdgeInsets.all(SizeConfig.scaleW*5))
                   ),
-                  child: Container(child: Text("Get Notified", style:  Theme.of(context).accentTextTheme.headline3.copyWith(fontWeight: FontWeight.bold, color: Colors.white),)),
+                  child: Container(child: Text("Notify Me", style:  Theme.of(context).accentTextTheme.headline3.copyWith(fontWeight: FontWeight.bold, color: Colors.white),)),
                 ),
               )
             ],

@@ -15,7 +15,6 @@ ThemeData appTheme() {
         fontFamily: "Noto Serif",
         fontSize: 64,
         color: Colors.black,
-        fontWeight: FontWeight.bold
       ),
       headline2: TextStyle(
         fontFamily: "Noto Serif",
