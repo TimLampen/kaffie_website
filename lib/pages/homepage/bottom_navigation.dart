@@ -17,15 +17,18 @@ class BottomNavigation extends StatelessWidget{
           child: Row(
             children: [
               Container(
-                width: SizeConfig.scaleW*65,
+                width: 200,
                 padding: EdgeInsets.all(10),
                 child: Text(
                   "Sign up for our newsletter and get notified when Kaffie launches publicly.",
                   maxLines: 2,
                   style: Theme.of(context).accentTextTheme.headline2),
               ),
+              Spacer(),
               Container(
-                width: SizeConfig.scaleW*30,
+                padding: EdgeInsets.all(10),
+
+                width: 100,
                 alignment: Alignment.centerRight,
                 child: ElevatedButton(
                   onPressed: (){
