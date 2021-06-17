@@ -12,7 +12,7 @@ class TimeComparison extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 50),
+      margin: EdgeInsets.only(top: this.isMobile ? 0 : 50),
       child: Column(
         children: [
           TimeCard(
@@ -64,15 +64,57 @@ class TimeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     if (this.isMobile) {
       return Container(
-        child: Card(
+        padding: EdgeInsets.all(5),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(3)),
+          color: this.isKaffie ? Theme
+              .of(context)
+              .primaryColorDark : Theme
+              .of(context)
+              .highlightColor,
+        ),
+        width: 200,
+        margin: EdgeInsets.only(bottom: 10),
+        child: Row(
+          children: [
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(this.title, style: this.isKaffie ? Theme
+                      .of(context)
+                      .accentTextTheme
+                      .headline2.copyWith(color: Colors.white) : Theme
+                      .of(context)
+                      .accentTextTheme
+                      .headline2
+                      .copyWith(color: Colors.black54)),
+                  Text(this.isKaffie ? this.subtitle : "${this.subtitle}",
+                      style: this.isKaffie ? Theme
+                          .of(context)
+                          .accentTextTheme
+                          .headline3.copyWith(color: Colors.white) : Theme
+                          .of(context)
+                          .accentTextTheme
+                          .headline3
+                          .copyWith(color: Colors.black54)),
+                ],
+              ),
+            ),
+            Spacer(),
+            Container(
+              alignment: Alignment.centerRight,
+              child: Text("${this.seconds}s", style: Theme.of(context).accentTextTheme.headline2.copyWith(color: this.isKaffie ? Colors.white : Colors.black54)))
+          ],
+        )/*Card(
           color: this.isKaffie ? Theme
               .of(context)
               .primaryColorDark : Theme
               .of(context)
               .highlightColor,
           child: ListTile(
-            leading: Icon(FontAwesome5.clock, color: this.isKaffie ? Colors.white : Colors.black54),
-            trailing: Text("${this.seconds}s", style: TextStyle(color: this.isKaffie ? Colors.white : Colors.black54)),
+            leading: Icon(FontAwesome5.clock, color: this.isKaffie ? Colors.white : Colors.black54, size: 16,),
+            trailing: Text("${this.seconds}s", style: Theme.of(context).accentTextTheme.headline2.copyWith(color: this.isKaffie ? Colors.white : Colors.black54)),
             title: Text(this.title, style: this.isKaffie ? Theme
                 .of(context)
                 .accentTextTheme
@@ -91,7 +133,7 @@ class TimeCard extends StatelessWidget {
                     .headline3
                     .copyWith(color: Colors.black54)),
           ),
-        ),
+        ),*/
       );
     }
     else {

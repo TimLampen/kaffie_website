@@ -30,18 +30,17 @@ ThemeData appTheme() {
     accentTextTheme: TextTheme(
       headline1: TextStyle(
           fontFamily: "Noto Serif",
-          fontSize: 42,
+          fontSize: 28,
           color: Colors.black,
-          fontWeight: FontWeight.bold
       ),
       headline2: TextStyle(
         fontFamily: "Noto Serif",
-        fontSize: 18,
+        fontSize: 12,
         color: Colors.black,
       ),
       headline3: TextStyle(
         fontFamily: "Noto Serif",
-        fontSize: 14,
+        fontSize: 8,
         color: Colors.black,
       ),
     ),

@@ -99,11 +99,12 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
     return Form(
         key: _formKey,
         child:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: SizeConfig.scaleH*10,
-              width: SizeConfig.scaleW*40,
+              height: 100,
+              width: 400,
               child: TextFormField(
                 controller: emailHolder,
                 validator: (value) {
@@ -133,8 +134,8 @@ class _LaptopEmailFormState extends State<LaptopEmailForm> {
               ),
             ),
             Container(
-                margin: EdgeInsets.only(left: SizeConfig.scaleW*2, top: 2),
-                height: SizeConfig.scaleH*5.5,
+                margin: EdgeInsets.only(left: 25),
+                height: 50,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).accentColor)

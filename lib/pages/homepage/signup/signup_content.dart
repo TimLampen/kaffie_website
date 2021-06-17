@@ -9,13 +9,13 @@ class SignupContent extends StatelessWidget{
     return  LayoutBuilder(
       builder: (context, constraints) {
         print(constraints.maxWidth);
-        if(constraints.maxWidth > 1050){
+        if(constraints.maxWidth > 1150){
           return Container(
             padding: EdgeInsets.only(left: SizeConfig.scaleW*45),
             child: DesktopSignupText()
           );
         }
-        else if(constraints.maxWidth > 580){
+        else if(constraints.maxWidth > 600){
           return Container(
               child: LaptopSignupText()
           );

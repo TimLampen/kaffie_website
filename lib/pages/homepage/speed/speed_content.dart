@@ -9,10 +9,10 @@ class SpeedContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if(constraints.maxWidth > 1050){
+        if(constraints.maxWidth > 1150){
           return DesktopSpeedContent();
         }
-        else if(constraints.maxWidth > 580) {
+        else if(constraints.maxWidth > 600) {
           return LaptopSpeedContent();
         }
         else{
@@ -27,7 +27,7 @@ class DesktopSpeedContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 250),
+      margin: EdgeInsets.only(top: 150),
       child: Stack(
         children: [
           Container(
@@ -81,35 +81,40 @@ class LaptopSpeedContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
-      padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
-      decoration: BoxDecoration(
-          color: Theme.of(context).accentColor,
-          borderRadius: BorderRadius.all(Radius.circular(10))
-      ),
-      margin: EdgeInsets.only(top: SizeConfig.scaleH*5),
+      width: 600,
       child: Column(
         children: [
           Container(
-            width: SizeConfig.scaleW * 70,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Brew more, in way less time.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
-                SizedBox(height: 10),
-                Text(
-                  "On average, Kaffie can brew your coffee faster than any other coffee-competitor on the market, due to it's fast-wakeup mechanism when paired with your Apple Watch."
-                      "With Kaffie, gone are the days waiting for your coffee to brew, by the time you come back from your fridge to get your milk, it will already be done.",
-                  style: Theme.of(context).textTheme.headline2,
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Brew more, in way less time.", style: Theme.of(context).textTheme.headline1, textAlign: TextAlign.center),
+                      SizedBox(height: 10),
+                      Text(
+                        "On average, Kaffie can brew your coffee faster than any other coffee-competitor on the market, due to it's fast-wakeup mechanism when paired with your Apple Watch."
+                            "With Kaffie, gone are the days waiting for your coffee to brew, by the time you come back from your fridge to get your milk, it will already be done.",
+                        style: Theme.of(context).textTheme.headline2,
+                        textAlign: TextAlign.center
+                        ,
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 75),
+                        child: TimeComparison()
+                      ),
+                    ],
+                  ),
                 ),
-                TimeComparison(),
+                Container(
+                    width: 375,
+                    child: Image.asset("assets/coffee_just_machine.png")
+                ),
               ],
             ),
-          ),
-          Container(
-              width: SizeConfig.scaleW*30,
-              margin: EdgeInsets.only( top: SizeConfig.scaleH*5),
-              child: Image.asset("assets/coffee_just_machine.png")
           ),
         ],
       ),
@@ -122,24 +127,32 @@ class MobileSpeedContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 50),
-      child: Column(
+      padding: EdgeInsets.only(left: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(SizeConfig.scaleW*5),
-
+            width: 225,
             child: Column(
               children: [
-                Text("Brew more, in way less time.", style: Theme.of(context).accentTextTheme.headline1.copyWith(fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                Text("Brew more, in way less time.", style: Theme.of(context).accentTextTheme.headline1),
                 SizedBox(height: 10),
                 Text(
                   "On average, Kaffie can brew your coffee faster than any other coffee-competitor on the market, due to it's fast-wakeup mechanism when paired with your Apple Watch."
                       "With Kaffie, gone are the days waiting for your coffee to brew, by the time you come back from your fridge to get your milk, it will already be done.",
-                  style: Theme.of(context).accentTextTheme.headline2, textAlign: TextAlign.center,
+                  style: Theme.of(context).accentTextTheme.headline2,
                 ),
-                TimeComparison(isMobile: true),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.only(bottom: 25, top: 10),
+                  child: TimeComparison(isMobile: true)
+                ),
               ],
             ),
+          ),
+          Spacer(),
+          Container(
+            child: Image.asset("assets/coffee_just_machine_half.png", width: 100)
           ),
         ],
       ),

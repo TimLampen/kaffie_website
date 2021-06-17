@@ -13,7 +13,7 @@ class BottomNavigation extends StatelessWidget{
       else
         return Container(
           color: Theme.of(context).highlightColor,
-          height: SizeConfig.scaleH*10,
+          height: 55,
           child: Row(
             children: [
               Container(
@@ -22,7 +22,7 @@ class BottomNavigation extends StatelessWidget{
                 child: Text(
                   "Sign up for our newsletter and get notified when Kaffie launches publicly.",
                   maxLines: 2,
-                  style: Theme.of(context).accentTextTheme.headline3),
+                  style: Theme.of(context).accentTextTheme.headline2),
               ),
               Container(
                 width: SizeConfig.scaleW*30,
@@ -35,7 +35,7 @@ class BottomNavigation extends StatelessWidget{
                     padding: MaterialStateProperty.all(EdgeInsets.all(20)),
                       backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColorDark),
                   ),
-                  child: Container(child: Text("Notify Me", style:  Theme.of(context).accentTextTheme.headline3.copyWith(fontWeight: FontWeight.bold, color: Colors.white),)),
+                  child: Container(child: Text("Notify Me", style:  Theme.of(context).accentTextTheme.headline2.copyWith(fontWeight: FontWeight.bold, color: Colors.white),)),
                 ),
               )
             ],

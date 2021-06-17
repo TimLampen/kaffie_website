@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kaffie_website/theme/size_config.dart';
 
-import '../slide_in_container.dart';
 
 class DesignContent extends StatelessWidget {
 
@@ -10,10 +9,10 @@ class DesignContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (context, constraints) {
-          if(constraints.maxWidth > 1050){
-            return DesktopDesignContent(width: constraints.maxWidth);
+          if(constraints.maxWidth > 1150){
+            return DesktopDesignContent();
           }
-          else if(constraints.maxWidth > 580){
+          else if(constraints.maxWidth > 600){
             return LaptopDesignContent();
           }
           else{
@@ -26,17 +25,18 @@ class DesignContent extends StatelessWidget {
 
 class DesktopDesignContent extends StatelessWidget {
 
-  double width;
-  DesktopDesignContent({Key key, this.width}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
         children: [
           Container(
+            margin: EdgeInsets.only(left: 300),
+            child: Image.asset("assets/ellipse.png", width: 800,)
+          ),
+          Container(
             alignment: Alignment.topCenter,
-            padding: EdgeInsets.only(top: 100),
+            padding: EdgeInsets.only(top: 150),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -67,68 +67,75 @@ class LaptopDesignContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: SizeConfig.scaleH*5),
-        padding: EdgeInsets.all(SizeConfig.scaleW*2.5),
-        decoration: BoxDecoration(
-            color: Theme.of(context).accentColor,
-            borderRadius: BorderRadius.all(Radius.circular(10))
-        ),
-      child: Column(
-        children: [
-          Container(
-            width: SizeConfig.scaleW*70,
-            padding: EdgeInsets.only(bottom: SizeConfig.scaleH*5),
-            child: Column(
-              children: [
-                Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.bold)),
-                SizedBox(height: 10),
-                Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
-                    "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).textTheme.headline2),
-              ],
+      child: Stack(
+          children: [
+            Container(
+                alignment: Alignment.topCenter,
+                child: Image.asset("assets/ellipse_long.png", width: 600)
             ),
-          ),
-          Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(20)),
+            Container(
+              alignment: Alignment.topCenter,
+              padding: EdgeInsets.symmetric(vertical: 50),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 600,
+                    margin: EdgeInsets.only(bottom: 75),
+                    child: Column(
+                      children: [
+                        Text("From tucked away to center stage.", style: Theme.of(context).textTheme.headline1, textAlign: TextAlign.center,),
+                        SizedBox(height: 10),
+                        Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
+                            "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).textTheme.headline2, textAlign: TextAlign.center,),
+                      ],
+                    ),
+                  ),
+                  Material(elevation: 10, child: Image.asset("assets/brew_bg.png", width: 600,)),
+                ],
               ),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("assets/brew_bg.png", width: SizeConfig.scaleW*70)
-              )
-          ),
-
-        ],
+            ),
+          ]
       ),
     );
   }
 }
 
+
 class MobileDesignContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(Scrollable.of(context).position.pixels);
     return Container(
-      padding: EdgeInsets.all(SizeConfig.scaleW*5),
-      decoration: BoxDecoration(
-          color: Theme.of(context).accentColor,
-      ),
-      alignment: Alignment.center,
-      child: Column(
-        children: [
-          Text("From tucked away to center stage.", style: Theme.of(context).accentTextTheme.headline1, textAlign: TextAlign.center),
-          SizedBox(height: 10),
-          Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
-              "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).accentTextTheme.headline2, textAlign: TextAlign.center,),
-          SizedBox(height: 20),
-          SlideInContainer(
-            widget: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset("assets/brew_bg.png")
+      child: Stack(
+          children: [
+            Container(
+                alignment: Alignment.topCenter,
+                child: Image.asset("assets/ellipse_long.png", width: 325)
             ),
-          ),
-        ],
+            Container(
+              alignment: Alignment.topCenter,
+              padding: EdgeInsets.symmetric(vertical: 25),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 325,
+                    margin: EdgeInsets.only(bottom: 25),
+                    child: Column(
+                      children: [
+                        Text("From tucked away to center stage.", style: Theme.of(context).accentTextTheme.headline1, textAlign: TextAlign.center,),
+                        SizedBox(height: 10),
+                        Text("With Kaffie, you don't have to hide your coffee machine in a corner. With its aesthetically pleasing design, rounded corners, "
+                            "and silent operation, Kaffie can be the centerpiece of any kitchen.", style: Theme.of(context).accentTextTheme.headline2, textAlign: TextAlign.center,),
+                      ],
+                    ),
+                  ),
+                  Material(elevation: 10, child: Image.asset("assets/brew_bg.png", width: 325)),
+                ],
+              ),
+            ),
+          ]
       ),
     );
   }
