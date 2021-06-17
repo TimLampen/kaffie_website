@@ -15,50 +15,76 @@ import 'package:kaffie_website/theme/size_config.dart';
 import 'bottom_navigation.dart';
 import 'features/feature_header.dart';
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatefulWidget{
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  ScrollController _scrollController;
+
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
 
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          Stack(
-            children: [
-              ResizedBackgroundImage(),
-              Column(
-                children: [
-                  HAppBar(),
-                  SignupContent(),
-                ],
-              )
-            ],
-          ),
-          Column(
-            children: [
-              DesignContent(),
-              SpeedContent(),
-              FeatureHeader(),
-              Container(
-                width: SizeConfig.scaleW*100,
-                color: Theme.of(context).highlightColor,
-                child: Column(
+      body: CustomScrollView(
+        controller: _scrollController,
+        slivers: <Widget>[
+          SliverList(
+            delegate: SliverChildListDelegate(
+          [
+                Stack(
                   children: [
-                    HealthFeature(),
-                    EaseOfUseFeature()
+                    ResizedBackgroundImage(),
+                    Column(
+                      children: [
+                        HAppBar(scrollController: this._scrollController),
+                        SignupContent(),
+                      ],
+                    )
                   ],
                 ),
-              ),
-              CupFeature(),
-              StayInTouch(),
-              Footer(),
-            ],
-          ),
-        ],
+                Column(
+                  children: [
+                    DesignContent(),
+                    SpeedContent(),
+                    FeatureHeader(),
+                    Container(
+                      width: SizeConfig.scaleW*100,
+                      color: Theme.of(context).highlightColor,
+                      child: Column(
+                        children: [
+                          HealthFeature(),
+                          EaseOfUseFeature()
+                        ],
+                      ),
+                    ),
+                    CupFeature(),
+                    StayInTouch(),
+                    Footer(),
+                  ],
+                ),
+              ]
+            ),
+          )
+        ]
       ),
       bottomNavigationBar: BottomNavigation()
     );
   }
-
 }
