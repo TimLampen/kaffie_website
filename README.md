@@ -1,18 +1,44 @@
 # Kaffie - Reimagine the way you brew.
-![Full-sized image of Kaffie](https://canadacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fqueensuca-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!nDcQjgMyjkGYt_uRzB5C1h77Gy-zDTdDnXUz-mZ4lIC0o2_oNYMKToSvQ9l4Gjmw%2Fitems%2F01ZOBUTYRAESHULNTUGFAJVDZKDI3KDH6O%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvcXVlZW5zdWNhLW15LnNoYXJlcG9pbnQuY29tQGQ2MWVjYjNiLTM4YjEtNDJkNS04MmM0LWVmYjI4MzhiOTI1YyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE2MjQ1NTc2MDAiLCJleHAiOiIxNjI0NTc5MjAwIiwiZW5kcG9pbnR1cmwiOiJleVArOVRSOGI5dUVMSkQyL09uTVErZUFqdk8yQVBaTUxQUlZmQVlvcVQwPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTE5IiwiaXNsb29wYmFjayI6IlRydWUiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiT0dVeE1ETTNPV010TXpJd015MDBNVGhsTFRrNFlqY3RabUk1TVdOak1XVTBNbVEyIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jOTk4YmJmNzJlYTQ1ZjM3M2U2NDJjZjViMmU5MmIwZjFlMTdkNTgyOGUxMjQyNjk4ZjRjNTY3NWEyNGE4NTZkMiIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jOTk4YmJmNzJlYTQ1ZjM3M2U2NDJjZjViMmU5MmIwZjFlMTdkNTgyOGUxMjQyNjk4ZjRjNTY3NWEyNGE4NTZkMiIsInNoYXJpbmdpZCI6IjhET1ZtdGZOY1VtY1lPbGcvVnBINXciLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.WUZldUR6a3MyQ202NWlhc3N5N09DcWJzMitDVGNpcENRMWo0UnRBbnFkQT0&encodeFailures=1&width=1839&height=1018&srcWidth=&srcHeight=)
+![Full-sized image of Kaffie](https://i.imgur.com/dciGqik.png)
 
 This README details the process that was used in developing this product including the business, marketing, and hardware aspects. To view the product, please visit our website at https://kaffie.me.
 
-## Introduction
+## Introduction (Skip down if you want to read the technical specs)
+### Why a Coffee Machine?
+Over the course of summer 2021 I wanted to try and make a hardware product so I could apply some of the theoretical knowledge that I had gained throughout my degree as a computer engineering student. Being in engineering, I drank lots of coffee, usually through a nice big coffee pot that I would share with the rest of my housemates. However, sometimes I would treat myself (specifically in the morning) and instead use my Nespresso machine and one of their expensive first-party pods.
+
+What I realized while doing this though is that the machine I was using was not perfect and had a lot of room for improvement. Being in a semi-awoken state in the morning made relatively small annoyances extremely amplified on their impact on my mood. For example, minute issues such as having an empty water container, having to wait for the water to heat up, or the loud sound of the pump working made my mood measurably worse.
+
+These annoyances meant that I had a problem which I could potentially solve, but I didn't know how to a) solve the issue or b) if this was just an issue that I was facing. To validate my problem, I interviewed numerous students and professionals asking them the simple question "What is the most annoying part of your morning routine?". To my surprise a good number of responses were not having motivation to get out of bed, making food, or waking up. When I asked "what is the best part of your morning routine?" the majority stated "when I have my first sip of coffee". Finally, to narrow the scope of the project I asked "Whats the most annoying thing about your coffee machine?" and many of the issues were the same as stated above. Now that I knew I had a problem I could start thinking of the solution.
+
+### What is It And How Does It Work?
+
+
 ## The Business
 
 ## The Software
 ### Website
-![](https://canadacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fqueensuca-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!nDcQjgMyjkGYt_uRzB5C1h77Gy-zDTdDnXUz-mZ4lIC0o2_oNYMKToSvQ9l4Gjmw%2Fitems%2F01ZOBUTYS3DJDFINPY3BGYWKDCKMBBN5I5%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvcXVlZW5zdWNhLW15LnNoYXJlcG9pbnQuY29tQGQ2MWVjYjNiLTM4YjEtNDJkNS04MmM0LWVmYjI4MzhiOTI1YyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE2MjQ1NTc2MDAiLCJleHAiOiIxNjI0NTc5MjAwIiwiZW5kcG9pbnR1cmwiOiJleVArOVRSOGI5dUVMSkQyL09uTVErZUFqdk8yQVBaTUxQUlZmQVlvcVQwPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTE5IiwiaXNsb29wYmFjayI6IlRydWUiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiT0dVeE1ETTNPV010TXpJd015MDBNVGhsTFRrNFlqY3RabUk1TVdOak1XVTBNbVEyIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jZDljOTI5NmE0ODg4N2ZiYWYyMDEzN2UyMTczZDgzN2ViZGY4ZjZmZDE1MDhkNmIzNzI2YzUwMzU4YjEzYWEzZSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jZDljOTI5NmE0ODg4N2ZiYWYyMDEzN2UyMTczZDgzN2ViZGY4ZjZmZDE1MDhkNmIzNzI2YzUwMzU4YjEzYWEzZSIsInNoYXJpbmdpZCI6IlpuanpFNU5wZFUydzV4WnBERksvc0EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.TFl0VDFCbTkyUFo2RlNIV0x4MTROYklmcmlKcSt0SXFQa29MUGRaOVVpMD0&encodeFailures=1&width=1839&height=1018&srcWidth=&srcHeight=)
+![](https://i.imgur.com/Q2oAE7h.png)
 
 ### App (?}
-![](https://canadacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fqueensuca-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!nDcQjgMyjkGYt_uRzB5C1h77Gy-zDTdDnXUz-mZ4lIC0o2_oNYMKToSvQ9l4Gjmw%2Fitems%2F01ZOBUTYV7MU5CVQJSHJDIEG5HB67ZM35L%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B2A3A65BF-32C1-463A-821B-A70FBF966FAB%7D%2C2%22&srcWidth=&srcHeight=&width=1838&height=1017&action=Access)
+Thanks to Apple's HomeKit and the relatively simple interaction required for the machine (turning it off and on) an iOS app actually didn't need to be created as I could leverage the existing infrastructure used for Apple Home (at least for an MVP). The watch does require an app to detect when you are moving / waking up to preheat the water but it is very light (and in progress). 
 
 ## The Firmware
 ## The Hardware
-![](https://canadacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Fqueensuca-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!nDcQjgMyjkGYt_uRzB5C1h77Gy-zDTdDnXUz-mZ4lIC0o2_oNYMKToSvQ9l4Gjmw%2Fitems%2F01ZOBUTYWSPHAKOHLKTVFLL4HVEVGCKTED%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvcXVlZW5zdWNhLW15LnNoYXJlcG9pbnQuY29tQGQ2MWVjYjNiLTM4YjEtNDJkNS04MmM0LWVmYjI4MzhiOTI1YyIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE2MjQ1NTc2MDAiLCJleHAiOiIxNjI0NTc5MjAwIiwiZW5kcG9pbnR1cmwiOiJleVArOVRSOGI5dUVMSkQyL09uTVErZUFqdk8yQVBaTUxQUlZmQVlvcVQwPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTE5IiwiaXNsb29wYmFjayI6IlRydWUiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiT0dVeE1ETTNPV010TXpJd015MDBNVGhsTFRrNFlqY3RabUk1TVdOak1XVTBNbVEyIiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jZDljOTI5NmE0ODg4N2ZiYWYyMDEzN2UyMTczZDgzN2ViZGY4ZjZmZDE1MDhkNmIzNzI2YzUwMzU4YjEzYWEzZSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfHVybiUzYXNwbyUzYWFub24jZDljOTI5NmE0ODg4N2ZiYWYyMDEzN2UyMTczZDgzN2ViZGY4ZjZmZDE1MDhkNmIzNzI2YzUwMzU4YjEzYWEzZSIsInNoYXJpbmdpZCI6IlpuanpFNU5wZFUydzV4WnBERksvc0EiLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.TFl0VDFCbTkyUFo2RlNIV0x4MTROYklmcmlKcSt0SXFQa29MUGRaOVVpMD0&encodeFailures=1&width=1839&height=1018&srcWidth=&srcHeight=)
+PCB Design                 |  Schematic
+:-------------------------:|:-------------------------:
+<img src="https://i.imgur.com/GzrbaR4.png" width="400">  |  <img src="https://i.imgur.com/u9RHyvf.png" width="400">
+
+In this section if you're ever asking yourself _why was this part chosen?_ the answer is probably **cost**. Being a student I didn't have a big budget (and spent most of it on a 3D printer), but I did have a bunch of scraps from previous projects laying around that I managed to use.
+
+### NodeMCU ESP12-E
+This was used as the microcontroller for the system due to its wifi capability. Additionally, the part (unofficially) supports Apple HomeKit through an Arduino package. One shortcoming of this part was the lack of analog inputs (only 1). In order to be able to read the weight of the water / cup I required two analog inputs and so had to use a multiplexer to switch between reading the two values.
+
+### RAC03E-3.3SK_277
+I was (and still am) pretty scared of AC current due to following Youtube channels such as ElectroBoom and PhotonicInduction (cool channel, he plays with 100s of amps on his indoor carpet). However, I thought that to be as careful as possible, I wouldn't make the ACDC converter myself and get something covered. This component convers 120VAC to 3.3VDC which is perfect for the NodeMCU as well as the other components (relays, multiplexer).
+
+### Heating Element
+Pulled from a cheap $20 Amazon Basics coffee machine that I had last year. Connects directly to 120VAC but is switched on/off using a relay to control the temperature.
+
+### 2x Ulka Pump Model EA Type EAP5
+This was actually the most expensive part of the machine - I needed two pumps (one from water tank -> coffee and other from coffee -> cup). These pumps are actually used as replacement parts for other coffee machines so they work perfectly. Unforunately, they are not rated to work with hot water, so it would have to be changed out when the product goes into production.
