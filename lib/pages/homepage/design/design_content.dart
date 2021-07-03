@@ -5,6 +5,9 @@ import 'package:kaffie_website/theme/size_config.dart';
 
 class DesignContent extends StatelessWidget {
 
+  final ScrollController scrollController;
+  DesignContent({Key key,@required this.scrollController}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

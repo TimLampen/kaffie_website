@@ -4,6 +4,10 @@ import 'package:kaffie_website/pages/homepage/signup/signup_text.dart';
 import 'package:kaffie_website/theme/size_config.dart';
 
 class SignupContent extends StatelessWidget{
+
+  final ScrollController scrollController;
+  SignupContent({Key key,@required this.scrollController}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return  LayoutBuilder(
@@ -12,7 +16,7 @@ class SignupContent extends StatelessWidget{
         if(constraints.maxWidth > 1150){
           return Container(
             padding: EdgeInsets.only(left: SizeConfig.scaleW*45),
-            child: DesktopSignupText()
+            child: DesktopSignupText(scrollController: this.scrollController)
           );
         }
         else if(constraints.maxWidth > 600){

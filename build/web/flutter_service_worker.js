@@ -23,7 +23,7 @@ const RESOURCES = {
 "assets/assets/kaffie_logo.png": "d56028fdd9fa65ea58cdca9d02c8f2fb",
 "assets/FontManifest.json": "7aaf3996738086bbd796613e14ef9e45",
 "assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "e73aee410f538eedf84fd8cb9847410f",
+"assets/NOTICES": "3227b9df94b89e9e12fc1f2fff490b0a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/flutter_icons/fonts/AntDesign.ttf": "3a2ba31570920eeb9b1d217cabe58315",
 "assets/packages/flutter_icons/fonts/Entypo.ttf": "744ce60078c17d86006dd0edabcd59a7",
@@ -44,9 +44,9 @@ const RESOURCES = {
 "favicon.png": "8121c907e1afce727059ce8986cb7608",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "43f2d0fd8870f750e49395f9e45005ba",
-"/": "43f2d0fd8870f750e49395f9e45005ba",
-"main.dart.js": "2d076a31f01c1dc62b34933bb4ed3826",
+"index.html": "1399ca9de7120f61aa6b72012faf1aab",
+"/": "1399ca9de7120f61aa6b72012faf1aab",
+"main.dart.js": "80afd27f91498f46ac7ecbc9af93b842",
 "manifest.json": "1b0d1784c2ff02431f4145149ecfc1c4",
 "version.json": "ccf113d4a246e7a70a5c82912e0cbda3"
 };
