@@ -13,6 +13,12 @@ class SignupContent extends StatelessWidget{
     return  LayoutBuilder(
       builder: (context, constraints) {
         print(constraints.maxWidth);
+        if(constraints.maxWidth > 1900){
+          return Container(
+              padding: EdgeInsets.only(left: SizeConfig.scaleW*45),
+              child: MonitorSignupText(scrollController: this.scrollController)
+          );
+        }
         if(constraints.maxWidth > 1150){
           return Container(
             padding: EdgeInsets.only(left: SizeConfig.scaleW*45),

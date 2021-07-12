@@ -3,13 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "c5de1bfb1f1c3dfaf1c65708e12b99dd",
+  "assets/AssetManifest.json": "3c1d0e4e5378c0e1bd25b4bbddee75e0",
 "assets/assets/bg1.png": "15ea41eb7277fb36f90972c3ffb48201",
 "assets/assets/brew_bg.png": "c7aecc75dfc4422f1e1f158eb4d9905a",
 "assets/assets/brew_bg_cropped.png": "1bd610c8841df22b546cb5b0a0bafea1",
 "assets/assets/brew_bg_full_desktop.png": "27875e4228d2ad6204e9d32aa273fd24",
 "assets/assets/brew_bg_full_laptop.png": "8183ab665a92e71b9851d92066fe68c1",
 "assets/assets/brew_bg_full_mobile.png": "a24ec83e850bcf123993e2b04df20578",
+"assets/assets/brew_bg_full_monitor.png": "b6cced65a96429ab148a893c0c292e21",
 "assets/assets/brew_no_bg.png": "23a5011f861c29473a6c19df62fbda4a",
 "assets/assets/coffee_cup.png": "076c83eecc20b55e1192118bd35591c8",
 "assets/assets/coffee_cup_square.png": "1997d5d83ab513b432c2fc01df066eb7",
@@ -44,9 +45,9 @@ const RESOURCES = {
 "favicon.png": "8121c907e1afce727059ce8986cb7608",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "1399ca9de7120f61aa6b72012faf1aab",
-"/": "1399ca9de7120f61aa6b72012faf1aab",
-"main.dart.js": "80afd27f91498f46ac7ecbc9af93b842",
+"index.html": "bdc8ec2885ab376c52e94c0563f54fe4",
+"/": "bdc8ec2885ab376c52e94c0563f54fe4",
+"main.dart.js": "b97da1eabf67e5cea2b728ea37819467",
 "manifest.json": "1b0d1784c2ff02431f4145149ecfc1c4",
 "version.json": "ccf113d4a246e7a70a5c82912e0cbda3"
 };

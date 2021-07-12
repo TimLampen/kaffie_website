@@ -9,7 +9,7 @@ class ResizedBackgroundImage extends StatelessWidget {
       builder: (context, constraints) {
         print(constraints.maxWidth);
         if(constraints.maxWidth > 1050){
-          return Image.asset("assets/brew_bg_full_desktop.png", width: SizeConfig.scaleW*100,);
+          return Image.asset("assets/brew_bg_full_monitor.png", width: SizeConfig.scaleW*100,);
         }
         else if(constraints.maxWidth > 580){
           return Image.asset("assets/brew_bg_full_laptop.png", width: SizeConfig.scaleW*100,);
